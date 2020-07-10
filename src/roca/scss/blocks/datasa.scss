@@ -1,0 +1,98 @@
+.DatasA {
+
+  margin: 0 10%;
+
+  $sectiongap: 18%;
+
+  .DatasSectionA {
+
+    display: inline-block;
+    vertical-align: top;
+    width: (100% - $sectiongap) / 2 - 1;
+    box-sizing: border-box;  
+
+    @media (max-width: 768px) {
+
+      width: 100%;
+    }
+
+    .Title {
+
+      font-family: "Gotham-Bold";
+      text-transform: uppercase;
+      padding: 0 0 2% 0;
+      border: solid $color-border-dark;
+      border-width: 0 0 1px 0;
+      margin: 0 0 10% 0;      
+      position: relative;
+
+      &:after {
+
+        $sizearrow: 10px;
+
+        content: "";
+        width: 0; 
+        height: 0;       
+        border-top: $sizearrow solid $color-border-dark;
+        border-right: $sizearrow solid transparent; 
+        border-bottom: $sizearrow solid transparent; 
+        border-left: $sizearrow solid transparent; 
+        display: block;
+        position: absolute;
+        top: 100%;
+      }
+    }
+
+    .DataA {
+
+      margin: 0 5% 10%;  
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+
+      $iconsize: 50px;    
+
+      .Icon {
+  
+        width: $iconsize;
+        height: $iconsize;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .Number {
+  
+        font-family: "Gotham-Light";
+        font-size: 300%;
+        color: $color-roca-blue-light;
+        margin: 0 0 0 $iconsize + $space;
+        line-height: $iconsize;
+      }
+
+      .Text {
+  
+        font-family: "Gotham-Bold";
+        margin: $space * -1 0 0 $iconsize + $space;
+      }
+
+      &.NoIcon {
+
+        .Number {
+
+          margin: 0 0 0 ;
+        }
+
+        .Text {
+    
+          margin: 0 0 0 0;
+        }
+      }
+    }
+  }
+
+  .DatasSectionA + .DatasSectionA {
+
+    margin: 0 0 0 $sectiongap;
+  }
+}

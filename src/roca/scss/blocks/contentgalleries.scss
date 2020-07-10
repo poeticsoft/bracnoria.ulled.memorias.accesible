@@ -1,0 +1,217 @@
+.ContentGalleries { 
+
+  $gap: $space * 2;
+  padding-top: $space * 2;
+
+  .ShowCase,
+  .Display {
+
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - #{ $gap / 2 });
+    padding: $space / 2;
+    box-sizing: border-box;
+    background-color: $color-background-light;
+
+    @media (max-width: 768px) {
+
+      width: 100%;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .ShowCase {
+
+    @media (max-width: 768px) {
+
+      margin: 0 0 6% 0;
+    }
+
+    .Thumb {
+
+      display: inline-block;
+      width: 33.33%;
+      padding: 0 0 22.14%;
+      position: relative;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      &.Selected {
+
+        figure {
+
+          border: solid 2px $color-border-dark;
+        }
+      }
+
+      figure {
+
+        @include absolutebox(
+          1,1,1,1
+        );
+        background-color: $color-background-grey-a;
+        overflow: hidden;
+
+        img {
+
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .Display {
+
+    margin: 0 0 0 $gap;
+
+    @media (max-width: 768px) {
+
+      margin: 0 0 0 0;
+    }
+
+    .GalleryC {
+
+      position: relative;
+      padding: 66.5% 0 0 0;
+
+      .GalleryImages {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0 66.5% 0;
+
+        .Images {
+
+          @include absolutebox();
+
+          .Image {
+
+            @include absolutebox();
+            background-color: $color-background-grey-a;
+            overflow: hidden;
+
+            img {
+
+              width: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        $buttonsize: $space * 2;
+
+        .Prev,
+        .Next {
+
+          @include absolutebox();
+
+          cursor: pointer;
+
+          &:before,
+          .Button {
+
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          &:before {
+
+            content: " ";
+            height: 100%;
+            width: 0;
+          }
+
+          .Button {
+
+            width: $buttonsize;
+            height: $buttonsize;
+            padding: $space;
+            background-color: $color-background-transparentbutton;
+            border-radius: 50%;
+            
+            img {
+
+              width: 100%;
+            }
+          }
+        }
+
+        .Prev {
+
+          left: $space;
+          right: auto;
+        }
+
+        .Next {
+
+          right: $space;
+          left: auto; 
+        }
+
+        .SlidesDots {
+
+          @include absolutebox();
+          top: auto;
+          text-align: center;
+
+          $dotsize: $space;
+          padding: $space 0;
+
+          .SlidesDot {
+
+            display: inline-block;
+            width: $dotsize;
+            height: $dotsize;
+            border-radius: 50%;
+
+            background-color: $color-background-light;
+
+            &.Selected {
+
+              background-color: $color-background-dark;
+            }
+          }
+
+          .SlidesDot + .SlidesDot {
+
+            margin: 0 0 0 $dotsize;
+          }
+        }
+      }
+
+      .PreTitle {
+
+        margin: 5% 0 1%;
+        font-family: "Gotham-Bold";
+        font-size: 80%;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+
+      .Title {
+
+        font-size: 120%;
+        line-height: 160%;
+        font-family: "Gotham-ExtraLight";
+        text-transform: uppercase;
+        color: $color-roca-blue-text;
+        padding: 0 0 1% 0;
+      }
+
+      .Text {
+
+
+      }
+    }
+  }
+}

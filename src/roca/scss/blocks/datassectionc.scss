@@ -1,0 +1,21 @@
+.DatasSectionC {
+
+  &.Datas_2 {
+
+    .DataC {
+
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+    }
+  }
+
+   .Text {
+
+    margin: 5% 0 0 0;
+    border: solid #000;
+    border-width: 1px 0 0 0;
+    padding: 5% 10% 10% 0;
+    text-align: left;
+  }
+}

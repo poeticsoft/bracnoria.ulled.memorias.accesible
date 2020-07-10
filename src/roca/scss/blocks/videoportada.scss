@@ -1,0 +1,49 @@
+body.react .VideoPortada {
+
+  @include absolutebox();
+  overflow: hidden;
+
+  video {
+
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .Tools {
+
+    @include absolutebox();
+    top: auto;
+    width: 100%;
+    padding: $space * 2;
+    box-sizing: border-box;
+
+    .Paused {
+
+      color: $color-text-light;
+      font-size: 80%;
+      margin: 0 $space * 2 0 0;
+      float: left;
+      text-shadow: 0 0 6px #000;
+    }
+    
+    .Sound {
+
+      $size: $space * 4;
+
+      width: $size;
+      height: $size;
+      border: 2px solid $color-border-light;
+      border-radius: 50%;
+      float: right;
+      cursor: pointer;
+
+      img {
+
+        width: 100%;
+      }
+    }
+  }
+}

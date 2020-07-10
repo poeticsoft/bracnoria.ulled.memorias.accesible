@@ -1,0 +1,194 @@
+.GraphicTabs {
+
+  $proportion: 40%;
+  $tabwidth: $space * 5;
+  $tabheight: $space * 5;
+
+  position: relative;
+  padding: 0 0 $proportion 0;
+  border: solid 1px $color-border-light;
+  
+  @media (max-width: 768px) {    
+
+    $proportion: 160%;
+    padding: 0 0 $proportion 0;
+  }
+
+  .GraphicTab {
+
+    @include absolutebox();
+
+    @media (min-width: 768px) { 
+
+      $proportion: 40%;
+
+      &:nth-child(1) { left: $tabwidth * 0; > .Title { width: calc(#{$proportion} + 20px * 0); } .GraphicTabGraphics { left: $tabwidth * 3; } }
+      &:nth-child(2) { left: $tabwidth * 1; > .Title { width: calc(#{$proportion} + 20px * 0.8); } .GraphicTabGraphics { left: $tabwidth * 2; }  }
+      &:nth-child(3) { left: $tabwidth * 2; > .Title { width: calc(#{$proportion} + 20px * 1.6); } .GraphicTabGraphics { left: $tabwidth * 1; }  }
+
+      &:not(:first-child) {
+
+        border: solid $color-border-light;
+        border-width: 0 0 0 1px;
+        margin-left: -1px;
+      }
+    }
+  
+    @media (max-width: 768px) { 
+
+      &:nth-child(1) { top: $tabheight * 0; .GraphicTabGraphics { top: $tabheight * 3; } }
+      &:nth-child(2) { top: $tabheight * 1; .GraphicTabGraphics { top: $tabheight * 2; }  }
+      &:nth-child(3) { top: $tabheight * 2; .GraphicTabGraphics { top: $tabheight * 1; }  }
+
+      &:not(:first-child) {
+
+        border: solid $color-border-light;
+        border-width: 1px 0 0 0 ;
+        margin-top: -1px;
+      }
+    }
+
+    > .Title {
+
+      font-family: "Gotham-Light";
+      text-transform: uppercase;
+      color: $color-text-light;
+      padding: 11px 16px;
+      cursor: pointer;
+      box-sizing: border-box;
+      height: $tabheight;
+
+      @media (max-width: 768px) { 
+          
+        font-size: 120%;  
+      }   
+
+      @media (min-width: 768px) { 
+          
+        width: $tabwidth;        
+        @include lateraltitle();
+        @include verticalcenter();
+      }
+        
+      $sizearrow: 8px;
+      
+      &:hover {
+
+        color: $color-text-dark;
+        background-color: $color-background-light;
+
+        &:before {
+
+          content: "";
+          width: 0; 
+          height: 0; 
+          border: $sizearrow solid transparent;
+          border-left: $sizearrow solid $color-arrow-dark;   
+          display: block;
+          position: absolute;
+          bottom: calc(50% - #{$sizearrow});
+          left: 0;
+          // transform: rotate(-135deg) translateY($sizearrow / 2);        
+          // transform-origin: 50% 50%;
+          margin: -$sizearrow * 1.5 auto 0;
+        } 
+      }      
+    }
+
+    &.Active {
+
+      >.Title {
+
+        color: $color-text-dark;
+        background-color: $color-background-light;
+
+        &:before {
+
+          $sizearrow: 8px;
+
+          content: "";
+          width: 0; 
+          height: 0; 
+          border: $sizearrow solid transparent;
+          border-left: $sizearrow solid $color-arrow-dark;   
+          display: block;
+          position: absolute;
+          bottom: calc(50% - #{$sizearrow});
+          left: 0;
+          // transform: rotate(-135deg) translateY($sizearrow / 2);        
+          // transform-origin: 50% 50%;
+          margin: -$sizearrow * 1.5 auto 0;
+        } 
+      }
+    }
+
+    .GraphicTabGraphics {
+
+      $graphicgap: $space * 2; 
+
+      @include absolutebox();
+      padding: $graphicgap;
+      border: solid $color-border-light;
+      border-width: 0 0 0 1px; 
+
+      @media (max-width: 768px) {           
+        
+        border-width: 1px 0 0 0; 
+      }   
+
+      .GraphicWrapper {
+
+        &:before,
+        .Graphic,
+        .Tabla {        
+
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        &:before {
+
+          content: " ";
+          height: 100%;
+          width: 0;
+        }  
+
+        .Graphic {
+
+          text-align: center;
+          height: 100%;
+
+          &:before,
+          > div {
+
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          &:before {
+
+            content: "";
+            width: 0;
+            height: 100%;
+          }
+
+          > div {
+
+            width: 99%;
+          }
+        }
+
+        .Tabla {
+
+          width: 90%;
+          margin: 0 0 0 5%;
+
+          .Legend {
+
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

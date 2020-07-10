@@ -1,0 +1,51 @@
+.TextSide {
+
+  padding: 3% 10%;
+  text-align: center;
+
+  .Side, 
+  .Text {
+
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .Side {
+
+    width: 38%;
+    float: right;
+    font-size: 130%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $color-roca-blue-text;
+    margin-top: 20px;
+  }
+
+  .Text {
+
+    width: 58%;
+    text-align: left;
+
+    @media (max-width: 768px) {
+
+      width: 100%;
+    }
+
+    p {
+
+      margin: 0 0 3% 0;
+
+      &:first-child {
+      
+        &:first-letter {
+
+          font-family: "Gotham-Condensed";
+          font-size: 600%;
+          display: inline-block;
+          margin-left: -10px;
+          color: $color-roca-blue-light; 
+        }
+      }
+    }
+  }
+}

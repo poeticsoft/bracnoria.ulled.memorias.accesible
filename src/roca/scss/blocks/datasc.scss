@@ -1,0 +1,99 @@
+.DatasC {
+
+  margin: 0 10%;
+  $sectiongap: 18%; 
+
+  .DatasSectionC {
+
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    box-sizing: border-box;  
+
+    @media (max-width: 768px) {
+
+      width: 100%;
+    }
+
+    .Title {
+
+      font-family: "Gotham-Bold";
+      text-transform: uppercase;
+      padding: 0 0 2% 0;
+      border: solid $color-border-dark;
+      border-width: 0 0 1px 0;
+      margin: 0 0 10% 0;      
+      position: relative;
+
+      &:after {
+
+        $sizearrow: 10px;
+
+        content: "";
+        width: 0; 
+        height: 0;
+        border-top: $sizearrow solid $color-border-dark;
+        border-right: $sizearrow solid transparent; 
+        border-bottom: $sizearrow solid transparent; 
+        border-left: $sizearrow solid transparent; 
+        display: block;
+        position: absolute;
+        top: 100%;
+      }
+    }
+
+    .DataC {
+
+      margin: 0 auto; 
+      width: auto;  
+      text-align: center;
+      min-height: 70px;
+      
+      .TextSup,
+      .TextInf,
+      .TextSupLight {
+  
+        font-size: 80%;
+        line-height: 100%;
+        height: 10px;
+      }
+
+      .TextSup,
+      .TextInf {
+  
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+      }
+
+      .TextSupLight {
+  
+        font-family: "Gotham-Light";
+        text-transform: uppercase;
+      }
+
+      .Number {
+  
+        font-family: "Gotham-Light";
+        font-size: 300%;
+        color: $color-roca-blue-light;
+        line-height: 100%;
+        height: 40px;
+      }
+
+      &.NoIcon {
+
+        .Number {
+
+          margin: 0 0 0 ;
+        }
+      }
+    }
+  }
+
+  &:after {
+
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

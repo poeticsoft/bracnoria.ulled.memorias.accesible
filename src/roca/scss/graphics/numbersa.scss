@@ -1,0 +1,36 @@
+
+.NumbersA {
+
+  color: $color-text-dark;
+  text-align: right;
+  box-sizing: border-box;
+
+  .Title {
+
+    font-family: "Gotham-Light";
+    font-size: 90%;   
+  }
+
+  .Number,
+  .Type {
+
+    display: inline-block;
+    color: $color-roca-blue-text;
+    font-family: "Gotham-Light";
+    font-size: 180%;
+    margin: 2% 0;
+    display: inline-block;
+  }
+
+  .Type {
+
+    margin: 0 0 0 $space / 2;
+
+  }
+
+  .Legend {
+
+    font-family: "Gotham-Book";
+    font-size: 90%;
+  }
+}

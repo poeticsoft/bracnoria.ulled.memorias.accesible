@@ -1,0 +1,112 @@
+.Account {
+
+  margin: 0 10% 10%;
+
+  .Title {
+
+    font-size: 200%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $color-roca-blue-light;
+    text-align: center;
+    border: solid $color-border-blue;
+    border-width: 0 0 1px 0;
+    padding: 0 0 5% 0;
+    margin: 5% auto;
+  }
+
+  .Table {
+
+    table {
+
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+
+      font-family: "Gotham-Bold";
+      color: $color-roca-blue-light;
+      font-size: 100%;
+      text-align: left;
+      padding: $space * 2 $space;
+      text-transform: uppercase;
+      text-align: right;
+
+      @media (max-width: 768px) { 
+          
+        font-size: 70%;
+      }
+
+      &:nth-child(1) { text-align: left; }
+    }
+
+    td {
+
+      padding: $space $space;
+      text-align: right;
+
+      @media (max-width: 768px) { 
+          
+        font-size: 70%;
+      }
+
+      &:nth-child(1) { text-align: left; }
+    }
+
+    tr:nth-child(1),
+    tr:nth-child(7),
+    tr:nth-child(8) { td { font-family: "Gotham-Book"; } }
+    
+    tr:nth-child(2),
+    tr:nth-child(3),
+    tr:nth-child(4),
+    tr:nth-child(5),
+    tr:nth-child(6),
+    tr:nth-child(9),
+    tr:nth-child(10),
+    tr:nth-child(14) { td { 
+      
+      &:nth-child(1) { 
+        
+        padding-left: $space * 4; 
+        
+        @media (max-width: 768px) { 
+          padding-left: $space * 2;
+        }
+      }
+      &:nth-child(2) { font-family: "Gotham-Book"; }
+    }}
+
+    tr:nth-child(13) { td {       
+      
+      border: solid $color-border-blue;
+      border-width: 1px 0;
+      margin: $space 0;
+      font-family: "Gotham-Bold";
+      color: $color-roca-blue-light;
+    }}
+
+    tr:nth-child(12),
+    tr:nth-child(14) { td {
+      
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-family: "Gotham-Book";
+      }
+    }}
+
+    tr:nth-child(12),
+    tr:nth-child(15) { td { 
+      
+      &:nth-child(1) { padding-left: $space * 4; }
+    }}
+  }
+
+  .Legend {
+
+    font-size: 80%;
+    line-height: 120%;
+    margin: 5% 0;
+  }
+}

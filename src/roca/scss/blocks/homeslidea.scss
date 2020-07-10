@@ -1,0 +1,87 @@
+.HomeSlideA { 
+
+  padding: 25% 0 0 0;
+
+  .Background {
+
+    bottom: 65%;
+  }
+
+  > .Title {
+
+    z-index: 2;
+  }
+
+  .HomeSlideAWrapper {
+
+    background-color: rgba(0 ,0 ,0, 0.89);
+    padding: 5% 10% 8%;    
+    position: relative;
+    z-index: 1;
+    
+    @media (max-width: 768px) {
+
+      padding: 5% 10% 15%;    
+    }
+    
+    @media (max-width: 500px) {
+
+      padding: 5% 10% 28%;    
+    }
+  }
+  
+  .Cita.Cita {
+
+    width: 65%;
+    background-color: transparent;  
+    color: $color-text-light; 
+    border: solid $color-border-light;
+    border-width: 1px 0;
+    padding: 2%;
+    margin: 5% 2% ;
+    font-size: 170%;
+  }
+
+  .More {
+
+    position: relative;
+    float: left;
+    @include morelink();
+    @include lightlink();
+
+    a {
+
+      background-color: transparent;
+      white-space: nowrap;
+      margin: 1px 0 0 0;
+
+      &:before {
+
+        border-color: $color-border-light;
+      }
+    }
+  }
+
+  .GoChapter {
+
+    position: relative;
+    float: right;
+    @include morelink();
+    @include framelink();
+    @include lightlink();
+
+    padding-left: $space;
+
+    a {
+
+      background-color: transparent;
+      white-space: nowrap;
+      margin: 1px 0 0 0;
+
+      &:before {
+
+        border-color: $color-border-light;
+      }
+    } 
+  }
+}

@@ -1,0 +1,156 @@
+.HomeSlideA,
+.HomeSlideB,
+.HomeSlideC,
+.HomeSlideD,
+.MapSections,
+.PageHeader {
+
+  position: relative;
+
+  .Background {
+
+    @include absolutebox();
+    overflow: hidden;
+    
+    img { 
+      
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  > .Title {
+
+    @include lateraltitle();
+    color: $color-text-light;
+    font-size: 150%;
+    font-family: 'Gotham-Light';
+    font-weight: normal;
+  }
+
+  .Cita {
+
+    position: relative;
+    width: 50%;
+    background-color: $color-transparent-light;
+    font-family: 'Gotham-Light';
+    font-weight: normal;
+    padding: 2%;
+    font-size: 160%;
+    line-height: 140%;      
+  }
+
+  &:after {
+
+    display: block;
+    clear: both;
+  }
+}
+
+.HomeSlideA,
+.HomeSlideB,
+.HomeSlideC,
+.HomeSlideD {
+
+  padding: 8%;
+}
+
+.HomeSlideA,
+.HomeSlideB,
+.HomeSlideC,
+.HomeSlideD,
+.MapSections {
+
+  .Title {
+
+    @media (max-width: 768px) {
+
+      font-size: 80%;
+      padding: $space $space * 2;
+    }
+  }
+
+  .Cita {
+
+    @media (max-width: 768px) {
+
+      width: 70%;
+      font-size: 110%;
+    }
+  }
+}
+
+.PageHeader {
+
+  padding: 0 0 30%;
+}
+
+.NormalText,
+.Texts {
+
+  figure {
+
+    margin: 5% 0;
+  }
+
+  p {
+
+    margin: 0 0 5%;
+  }
+}
+
+.NormalText {
+
+  margin: 5% 20%;
+  
+  @media (max-width: 768px) {
+
+    margin: 5% 10%;
+  }
+}
+
+@import "account";
+@import "arrowfooter";
+@import "balance";
+@import "ciclo";
+@import "cita";
+@import "colorsectiona";
+@import "colorsectionb";
+@import "colorsectionc";
+@import "contentgalleries";
+@import "cover";
+@import "datasa";
+@import "datasb";
+@import "datasc";
+@import "datassectionc";
+@import "globalfooter";
+@import "graphictabs";
+@import "groupcompanies";
+@import "highlighta";
+@import "hito";
+@import "homeslidea";
+@import "homeslideb";
+@import "homeslidec";
+@import "homeslided";
+@import "imageab";
+@import "impactocovid";
+@import "mapcontent";
+@import "mapcontents";
+@import "mapsections";
+@import "mapsectionsapp";
+@import "menuab";
+@import "menuc";
+@import "menud";
+@import "menugallery";
+@import "pageheader";
+@import "sectionaccess";
+@import "sectioncontent";
+@import "sectionhead";
+@import "sectionhitos";
+@import "side";
+@import "textgraphic";
+@import "textside";
+@import "videoportada";
+@import "pointdata";

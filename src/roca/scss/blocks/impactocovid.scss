@@ -1,0 +1,24 @@
+.ImpactoCovid {
+
+  margin: 5% 10%;
+  padding: 5%;
+  background-color: $color-background-grey-a;
+
+  .Title {
+
+    font-family: "Gothan-Bold";
+    font-size: 100%;
+    margin: 0 0 5% 0;
+  }
+
+  .Text {
+
+    font-size: 90%;
+
+    p:not(:last-child) {
+
+      margin: 0 0 5% 0;
+    }
+
+  }
+}

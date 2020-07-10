@@ -1,0 +1,164 @@
+.MenuA,
+.MenuB { 
+
+  position: relative;
+
+  .MenuIcons {    
+
+    margin: 10% auto 0;  
+    background-color: $color-transparent-light;
+    padding: 5%;
+    
+    .OptionA {
+
+      margin: 0 auto;
+      position: relative;      
+      filter: grayscale(1) brightness(0);
+
+      .Icon {
+
+        width: 10%;
+        margin: 0 auto;
+      }
+
+      &:before,
+      &:after {
+
+        content: " ";
+        @include absolutebox();
+        top: auto;
+        bottom: 10px; // TODO
+        border: solid $color-border-dark;
+        border-width: 1px 0 0 0;
+        width: 44%;
+      }
+
+      &:before {
+
+        right: auto;
+      }
+
+      &:after {
+
+        left: auto;
+      }
+
+      .Title {
+
+      text-align: center; 
+      }
+
+      .Link {
+
+        display: none;
+      }
+    }
+
+    .Options {
+
+      text-align: center;
+      border: solid $color-border-dark;
+      border-width: 0 1px;
+      padding: 5%;
+      margin: 2% 0 0 0;
+      position: relative;
+
+      .OptionB {
+
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        position: relative;    
+        filter: grayscale(1) brightness(0);
+
+        .Icon {
+
+          width: 40%;
+          margin: 0 auto;
+        }
+
+        .Title,
+        .Text {
+
+          text-transform: uppercase;
+          text-align: left;
+          font-size: 100%;
+          margin: 5% auto 0;
+          width: 70%;
+        }
+
+        .Title {
+
+          font-family: "Gotham-Bold";
+        }
+
+        .Link {
+
+          display: none;
+        }
+      }
+
+      .OptionB + .OptionB {
+
+        margin: 0 0 0 5%;
+
+        &:before {
+          
+          $size: 50%;
+
+          content: " ";
+          position: absolute;
+          top: -10%;
+          right: 90%;
+          width: $size;
+          height: $size;
+          background-image: url(~assets/arrows-right.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+      }
+
+      .Left,
+      .Right {
+
+        position: absolute;
+        width: 33%;
+
+        a {
+
+          display: inline-block;
+          padding: $space $space * 2;
+          background-color: #fff;
+          text-transform: uppercase;
+        }
+      }
+
+      .Left {
+
+        top: -10%;
+        right: 102.5%;
+        transform: rotate(270deg);
+        transform-origin: 100% 0;
+      }
+
+      .Right {
+
+        bottom: 110%;
+        right: -3%;
+        transform: rotate(270deg);
+        transform-origin: 100% 100%;
+      }
+    }
+  }
+}
+
+.MenuB {
+
+  padding: 0 8% 5%;
+
+  .MenuIcons {    
+
+    margin: 2% auto 0; 
+  }
+}

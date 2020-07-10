@@ -1,0 +1,139 @@
+.TextGraphic {
+
+  margin: 0 10%;
+
+  .TextColumn {
+
+    float: left;
+    width: 48%;
+
+    @media (max-width: 768px) {
+
+      float: none;
+      width: 100%;
+    }
+
+    .Title {
+
+      font-family: "Gotham-Bold";
+      line-height: $space * 4;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .Text {
+
+      padding: $space * 2 0 0 0;
+      border: solid $color-border-blue;
+      border-width: 1px 0 0 0;
+    }
+
+    .Small {
+
+      font-size: 70%;
+      margin: 4% 0 0;
+      width: 70%;
+      line-height: 150%;
+    }
+
+    p:not(.Title) {
+
+      margin: 0 0 4% 0;
+    }
+  }
+
+  .GraphicColumn {
+
+    float: right;
+    width: 48%;
+    margin: $space * 4 0 0 0;
+    padding: $space * 4 0 0 $space * 4;
+    border: solid $color-border-blue;
+    border-width: 1px 0 0 0;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+
+      float: none;
+      width: 100%;
+      padding: $space * 4 0 0 0;
+    }
+
+    h4 {
+
+      font-family: "Gotham-Bold";
+      font-size: 80%;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 0 5% 0;
+    }
+
+    .GraphicWrapper {
+
+      padding: 0 0 40% 0;
+      position: relative;
+
+      .Graphic {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    
+    .Tabla {
+
+      width: 100%;
+      padding: 10% 0 0 0;
+
+      table {
+
+        border-collapse: collapse;
+        width: 100%;
+
+        th, td {
+
+          border: solid $color-border-dark;
+          border-width: 1px 0 0 0;
+          padding: $space / 2 $space;
+          font-size: 90%;
+          text-align: right;
+        
+          @media (max-width: 1000px) { 
+
+            font-size: 65%;
+            padding: $space / 2 $space / 2;
+          }
+        }
+
+        th {
+
+          color: $color-roca-blue-text;
+        }
+      }
+    }
+
+    .PieDeGrafico {
+
+      text-align: right;
+      font-size: 80%;
+      margin: 2% 0 0 0;
+    }
+
+    .Legend {
+
+      font-size: 70%;
+      text-align: right;
+      margin: 5% 0 0 auto;
+      width: 64%;
+      line-height: 140%;
+    }
+  }
+
+  &:after {
+
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

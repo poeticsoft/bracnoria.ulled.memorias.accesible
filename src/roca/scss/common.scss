@@ -1,0 +1,159 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+
+  min-width: 920px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  margin: 0;
+}
+
+h1 {
+
+  display: none;
+}
+
+p {
+
+  margin: 0;
+}
+
+a {
+
+  text-decoration: none;
+  color: $color-text-medium;
+
+  &:hover,
+  &:visited {
+
+    color: $color-text-medium;
+  }
+}
+
+figure {
+
+  margin: 0;
+  overflow: hidden;
+
+  img {
+
+    width: 100%;
+    display: block;
+  }
+}
+
+#AnnualMemory {
+
+  font-family: "Gotham-Light";
+  font-size: 90%;
+  line-height: 150%;
+
+  @media (max-width: 768px) {
+
+    font-size: 75%;
+  }
+  
+  strong {
+
+    font-family: "Gotham-Bold";
+  }
+
+  .Page {
+
+    padding: 0;
+
+    > .Title {
+
+      display: none;
+    }
+
+    .SectionHead {
+
+      .Slogan {
+
+        @media (max-width: 768px) {
+
+          font-size: 180%;
+          line-height: 150%;
+        }
+      }
+
+      .Text {
+
+        @media (max-width: 768px) {
+
+          margin: 0 0 5%;
+        }
+      }
+    }
+  }
+}
+
+body.react {
+
+  overflow: hidden;
+
+  #AnnualMemory {
+
+    @include absolutebox();
+
+    $menuheight: $space * 8;
+
+    .Pager {      
+
+      @include absolutebox();
+
+      .MainMenu {
+
+        @include absolutebox();
+        bottom: auto;
+        height: $menuheight;
+        z-index: 1;
+      }
+
+      .PageWrapper {
+
+        @include absolutebox();
+        top: $menuheight;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        z-index: 0;
+
+        &.Ready {
+
+          opacity: 1;
+        }
+
+        > .Page {
+
+          @include absolutebox();
+          padding-bottom: 10%;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+
+          &:after {
+
+            display: block;
+            content: " ";
+            clear: both; 
+          }
+        }
+      }
+    }
+
+    .Popup {    
+
+      position: absolute;
+      z-index: 20;
+    }
+  }
+}

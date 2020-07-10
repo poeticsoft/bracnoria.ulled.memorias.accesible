@@ -1,0 +1,48 @@
+.MenuGallery { 
+  
+  padding: 0 5%;
+  
+  .GalleryOption {
+
+    float: left;
+    width: 50%;
+    padding: 0 0 25% 0;
+    position: relative;
+
+    .Image {
+
+      @include absolutebox(
+        5%,
+        2.5%,
+        5%,
+        2.5%
+      );
+
+      img {
+
+        width: 100%;
+      }      
+    }
+
+    .Icon {
+
+      $size: 15%;
+      position: absolute;
+      top: $size;
+      left: $size / 2;
+      width: $size;
+      height: $size * 2;
+      border-radius: 50%;
+      background-color: #000;
+      
+      filter: grayscale(1) brightness(2.3);
+    }
+  }
+
+  &:after {
+
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

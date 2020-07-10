@@ -1,0 +1,170 @@
+.GlobalFooter {  
+
+  margin: 10% 0 0 0;
+
+  ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .Columns {
+    
+    padding: $space * 3 10%;
+    background-color: $color-background-dark;
+    text-align: center;
+
+    .Column {
+
+      display: inline-block;
+      vertical-align: top;
+      color: $color-text-light;
+      width: 49%;
+      text-align: left;
+
+      a {
+        
+        color: $color-text-light;
+      }
+
+      .Links {
+
+        margin: 0 0 2% 0;
+
+        li {
+
+          margin: 0 0 2% 0;
+
+          &:before,
+          a {
+
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          &:before {
+
+            $size: $space * 2;
+
+            content: " ";
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            border: solid 1px $color-border-light;
+            background-image: url(~assets/link.svg);
+            background-repeat: no-repeat;
+            background-size: 140%;
+            background-position: center;
+
+          }
+        }
+
+        a {        
+
+          font-family: "Gotham-Bold";
+        }
+      }
+
+      .Social {
+
+        margin: 5% 0 0 0;
+
+        .Text,
+        ul,
+        li,
+        a {
+
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .Text {
+
+          font-family: "Gotham-Bold";          
+        }
+
+        li {
+
+          a {
+
+            $size: $space * 3;
+
+            width: $size;
+            height: $size;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            margin: 0 0 0 $space;
+
+            &.facebook { background-image: url(~assets/social-facebook.jpg) }
+            &.twitter { background-image: url(~assets//social-twitter.jpg) }
+            &.linkedin { background-image: url(~assets//social-linkedin.jpg) }
+            &.youtube { background-image: url(~assets/social-youtube.jpg) }
+            &.instagram { background-image: url(~assets//social-instagram.jpg) }
+          }
+        }
+      }
+
+      .Title {
+
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+        margin: 0 2% 0 0;
+      }
+
+      > .Text {
+
+        font-size: 80%;
+        line-height: 140%;
+      }
+    }
+  }
+
+  .End {
+    
+    padding: $space * 2 10%;
+
+    &:after {
+
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .Image {
+
+      float: left;
+      width: 140px;
+
+      img {
+
+        width: 100%;
+      }
+    }
+
+    .Links {
+
+      float: right;
+
+      li {
+
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 $space;
+      }
+
+      li + li {
+
+        border: solid $color-border-dark;
+        border-width: 0 0 0 1px;
+      }
+    }
+  }
+}

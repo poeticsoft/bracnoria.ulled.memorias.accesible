@@ -1,0 +1,21 @@
+.HomeSlideC { 
+
+  overflow: hidden;
+  
+  .Background {
+
+    &:after {
+
+      content: " ";
+      display: block;
+      @include absolutebox();
+      top: auto;
+      height: 30%;
+      background: linear-gradient(
+        0deg, 
+        #fff 0%, 
+        transparent 100%
+      );
+    }
+  }
+}

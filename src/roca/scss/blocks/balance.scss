@@ -1,0 +1,138 @@
+.Balance {
+
+  margin: 0 10% 10%;
+
+  .Title {
+
+    font-size: 200%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $color-roca-blue-light;
+    text-align: center;
+    border: solid $color-border-blue;
+    border-width: 0 0 1px 0;
+    padding: 0 0 5% 0;
+    margin: 5% auto;
+  }
+
+  .Table {
+
+    margin: 0 0 10%;
+
+    table {
+
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+
+      font-family: "Gotham-Bold";
+      color: $color-roca-blue-light;
+      font-size: 100%;
+      text-align: left;
+      padding: $space * 2 $space $space / 2;
+      text-transform: uppercase;
+      text-align: right;
+      border: solid $color-border-dark;
+      border-width: 0 0 1px 0;
+      margin: 0 0 $space 0;
+
+      @media (max-width: 768px) { 
+          
+        font-size: 70%;
+      }
+
+      &:nth-child(1) { text-align: left; }
+    }
+
+    tbody:before {
+
+      content: " ";
+      display: block;
+      height: $space * 2;
+    }
+
+    td {
+
+      padding: $space $space;
+      text-align: right;
+
+      @media (max-width: 768px) { 
+          
+        font-size: 70%;
+      }
+
+      &:nth-child(1) {
+
+        text-align: left;
+        padding-left: $space * 4;
+        
+        @media (max-width: 768px) { 
+          
+          padding-left: $space * 2;
+        }
+      }
+    }
+
+    &.Activo {
+
+      tr:nth-child(1),
+      tr:nth-child(12),
+      tr:nth-child(20) { td { padding-left: $space; } } 
+
+      tr:nth-child(20) { td {       
+        
+        border: solid $color-border-blue;
+        border-width: 1px 0;
+        margin: $space 0;
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+        color: $color-roca-blue-light;
+      }}
+    }
+
+    &.Pasivo {
+      
+      tr:nth-child(1),
+      tr:nth-child(11),
+      tr:nth-child(18),
+      tr:nth-child(26) { td { 
+
+        padding-left: $space;
+        font-family: "Gotham-Book";
+      }} 
+      
+      tr:nth-child(10),
+      tr:nth-child(17),
+      tr:nth-child(25) { td { 
+
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+        padding-left: $space * 4;
+      }}    
+
+      tr:nth-child(8) { td {       
+        
+        font-family: "Gotham-Book";
+      }}
+
+      tr:nth-child(26) { td {       
+        
+        border: solid $color-border-blue;
+        border-width: 1px 0;
+        margin: $space 0;
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+        color: $color-roca-blue-light;
+      }}
+    }
+  }
+
+  .Legend {
+
+    font-size: 80%;
+    line-height: 120%;
+    margin: 5% 0;
+  }
+}

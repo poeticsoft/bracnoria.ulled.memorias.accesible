@@ -1,0 +1,229 @@
+.MainMenu {
+
+  font-size: 120%;
+  box-sizing: border-box; 
+  border: solid $color-border-dark;
+  border-width: 0 0 1px 0;
+
+  .Menu {
+
+    position: relative;
+    border: solid $color-border-dark;
+    border-width: 0 0 1px 0;
+
+    @media (max-width: 1040px) {
+          
+      width: 180px;
+    }
+
+    .Options {
+
+      position: relative;
+      background-color: $color-background-light; 
+      height: $space * 8;
+      overflow: hidden;
+
+      transition-property: height;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+ 
+      @media (min-width: 1040px) {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0 110px 0 0;
+      }
+
+      @media (max-width: 1040px) {
+          
+        height: 63px;
+        width: 180px;
+
+        &.Opened {
+
+          height: 360px;
+
+          @media (max-width: 768px) {
+
+            height: 320px;
+          }
+        }
+      }
+
+      .Cover,
+      .Option {
+
+        display: inline-block;
+        vertical-align: top;
+        height: 100%; 
+        
+        @media (min-width: 1040px) {
+
+        }
+
+        &.Progression {
+
+          border-color: $color-border-dark;
+        }
+
+        @media (max-width: 1040px) {
+
+          display: block;
+          height: auto; 
+          padding: 0 0 0 $space * 2;
+        }
+      } 
+
+      .Cover {
+
+        padding: $space * 2 + 5 $space * 2 $space * 2;
+        position: relative; 
+        box-sizing: border-box;
+
+        img {
+
+          width: 114px;
+        }
+
+        .Title {
+
+          font-size: 60%;
+          text-transform: uppercase;
+          color: $color-text-dark;
+          white-space: nowrap;
+        }
+      }
+
+      .Option {
+
+        font-size: 56%;
+        line-height: 150%;
+        text-transform: uppercase;
+        font-family: "Gotham-Bold";
+        color: $color-text-dark;
+        box-sizing: border-box;
+        padding: 0 0 0 $space * 3;       
+
+        @media (max-width: 1040px) {
+
+          padding: 0 0 0 $space * 2;
+        }
+
+        &:before,
+        span {
+
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        &:before {
+
+          content: "";
+          height: 100%;
+          width: 0;
+
+          @media (max-width: 1040px) {
+
+            height: auto;
+          }
+        }
+
+        &.active {
+
+          font-family: "Gotham-Ultra";
+          letter-spacing: 0.03em;
+        }
+      } 
+
+      .Option + .Option {     
+
+        @media (max-width: 1040px) {
+
+          padding: $space * 2.5 0 0 $space * 2;
+        }
+      }
+    }  
+
+    .OpenClose {
+
+      $size: $space * 4;       
+
+      position: absolute;
+      bottom: - $size / 2;
+      right: $space;
+      width: $size;
+      height: $size;
+      padding: $space / 2;
+      background-color: $color-background-light;
+      border: solid 2px $color-border-dark;
+      border-radius: 50%;
+      display: none;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      img {
+
+        width: 100%;
+      }           
+
+      @media (max-width: 1040px) {
+
+        display: block;
+      }
+    }
+  }
+
+  .Progress {
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: $color-background-dark;
+    width: 0;
+    transition-property: width;
+    transition-duration: 0.1s;   
+
+    &.OptionActive_0 { width: 0 !important; }            
+
+    @media (max-width: 1040px) {
+
+      width: 0 !important;
+    }
+  }
+
+  .LangPDF {
+
+    width: $space * 6;
+    position: absolute;
+    top: 0;
+    right: $space * 3;
+    box-sizing: border-box;
+
+    .Lang,
+    .PDF {
+
+      img {
+
+        width: 100%;
+      }
+    }
+
+    .Lang {
+
+      padding: $space $space 0;
+      border: solid $color-border-dark;
+      border-width: 0 0 0 1px;
+      margin: 0 0 $space 0;
+      cursor: pointer;
+    }
+
+    .PDF {
+
+      margin: -$space / 2 $space / 4 0 $space * 0.75;
+      border-radius: 50%;
+      border: solid 1px $color-border-light;
+      cursor: pointer;
+    }
+  }
+}

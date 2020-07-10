@@ -1,0 +1,127 @@
+.Popup {
+
+  background-color: $color-background-light;
+  border: solid 2px $color-border-dark;
+  border-radius: 50%;
+
+  .Center {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $space * 5;
+    height: $space * 5;
+    transform: translate(-50%, -50%);
+    background-image: url(~assets/map-point.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .Close,
+  .Content,
+  .LogoRoca {
+    
+    transition-property: opacity;
+    transition-duration: 1s;
+  }
+
+  .Content {
+
+    @include absolutebox();
+    padding: $space * 8 10%;
+    overflow-y: auto;
+
+    @media (max-width: 768px) { 
+
+      top: $space * 7;
+      padding: $space 0;
+    }
+
+    .ContentWrapper {
+
+      max-width: 900;
+      margin: 0 auto;
+    }
+  }
+
+  .LogoRoca {
+
+    position: absolute;
+    top: $space * 2;
+    left: $space * 2 + 4;
+
+    @media (max-width: 768px) {    
+     
+      top: 0;
+      left: 0;
+      background-color: $color-background-light;
+      border: solid $color-border-dark;
+      border-width: 0 0 1px 0;
+      width: 100%;
+      padding: $space * 2 $space * 2 + 4 $space * 1.5;
+    }
+
+    img {
+
+      width: 114px;
+    }
+
+    .Title {
+
+      font-size: 72%;
+      text-transform: uppercase;
+      color: $color-text-dark;
+    }
+  }
+
+  .Close {
+
+    $size: $space * 5;
+    
+    position: absolute;
+    top: $size / 2;
+    right: $size;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color-background-light;
+    background-image: url(~assets/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64%;
+    border-radius: 50%;
+    border: solid 3px $color-border-dark;
+    transition-property: opacity;
+    cursor: pointer;    
+    z-index: 100;    
+
+    @media (max-width: 768px) {
+
+      $size: $space * 3;
+      top: $size / 2;
+      right: $size / 2;
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+.avanzando-hacia-el-futuro-crecimiento,
+.avanzando-hacia-el-futuro-excelencia-operacional,
+.avanzando-hacia-el-futuro-innovacion,
+.avanzando-hacia-el-futuro-transformacion-digital,
+.avanzando-hacia-el-futuro-sostenibilidad,
+.avanzando-hacia-el-futuro-personas,
+.informe-financiero-cuentas-anuales,
+.informe-financiero-sociedades-del-grupo {
+
+  .Page {
+
+    max-width: 980px !important;
+  }
+}

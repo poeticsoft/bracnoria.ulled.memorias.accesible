@@ -1,0 +1,13 @@
+.PageHeader {
+
+  padding: 0 0 45% 0;
+
+  > .Title {
+
+    @media (max-width: 768px) {
+
+      font-size: 60%;
+      padding: $space $space * 2;
+    }
+  }
+}

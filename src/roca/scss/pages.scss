@@ -1,0 +1,630 @@
+
+.Page.inicio,
+.Page.home {
+
+  .HomeSlideA {
+
+    .NumbersA {
+
+      .Title,
+      .Number,
+      .Type,
+      .Legend {
+          
+        color: $color-text-light;
+      }
+    }
+  }
+
+  .HomeSlideB {
+
+    .Title {
+
+      color: $color-text-dark;
+    }
+  }
+
+  .MenuD {
+    
+    margin: -10% 10% 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+
+    .SectionHead {
+
+      margin: 7% 0 5% 0;
+      padding-top: 5%;
+    }
+  }
+
+  .MapSections {
+
+    overflow: hidden;
+
+    .World {
+
+      margin: 0 10% 210px;
+
+      @media (max-width: 768px) {
+
+        margin: 0 -166px 210px;
+        
+        .PointTitle {
+
+          top: 20px;
+          font-size: 70%;
+        }
+      }
+    }
+  }
+}
+
+.Page.the-way-ahead-growth,
+.Page.avanzando-hacia-el-futuro-crecimiento {
+
+  .SectionHitosC {
+
+    .SectionHead {
+
+      padding: 0 0 2% 0;
+      border: solid $color-border-blue;
+      border-width: 0 0 1px 0;
+
+      .Slogan {
+
+        font-size: 200%;
+      }
+    } 
+    
+    .Hitos {
+
+      .Hito {
+
+        flex: 0 0 50%;
+        
+        @media (max-width: 768px) { 
+          
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
+
+.Page.the-way-ahead-operational-excellence,
+.Page.avanzando-hacia-el-futuro-excelencia-operacional {  
+  
+  .DatasA {
+
+    text-align: center;
+  }
+  
+  .SectionHitosC {
+
+    .SectionHead {
+
+      .Slogan {
+
+        font-size: 200%;
+      }
+    }
+
+    .Hitos {
+
+      .Hito {
+
+        flex: 0 0 50%;
+
+        @media (max-width: 768px) { 
+          
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  #Single {
+      
+    .Title {
+    
+      padding: 2% 0 1.5%;
+      margin: 0 0 1.5% 0;
+    }    
+
+    .Hito {
+
+      flex: 0 0 100%;
+  
+      .HitoWrapper {
+
+        padding: 0 0 2.5% 0;
+      }
+
+      .Image {
+
+        padding: 0 0 28% 0;
+      }
+    }
+  }
+}
+
+.Page.the-way-ahead-innovation,
+.Page.avanzando-hacia-el-futuro-innovacion {  
+
+  .DatasB {
+
+    width: 50%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      
+      width: 80%;
+    }
+
+    .DatasSectionB {
+
+      width: 100%;
+      text-align: center;
+      padding: 0;
+
+      .Title {
+
+        margin: 0 0 $space 0;
+      }
+
+      .DataB {
+
+        .Number {
+
+          margin: 0 0 $space 0;
+        }
+      }
+    }
+  }
+  
+  .SectionHitosC {
+
+    .SectionHead {
+
+      .Slogan {
+        font-size: 200%;
+      }
+    }
+
+    .Hitos {
+
+      .Hito {
+
+        flex: 0 0 33.33%;
+
+        @media (max-width: 768px) { 
+          
+          flex: 0 0 100%;
+        }
+
+        .Image {
+
+          padding: 0 0 80%;
+        }
+      }
+    }
+  }
+}
+
+.Page.the-way-ahead-digital-transformation,
+.Page.avanzando-hacia-el-futuro-transformacion-digital {
+
+  .ColorSectionB {
+    
+    margin: 10% 10% 0;
+  }
+}
+
+.Page.we-are-water-foundation,
+.Page.fundacion-we-are-water {
+
+  .SectionHead {    
+      
+    @media (max-width: 768px) {
+
+      margin-top: 15%;
+    }
+
+    .Slogan {
+
+      margin: 0 auto 4%;
+    }
+
+    .Logo {
+
+      width: 16%;
+      margin: 0 auto 4%;
+      
+      @media (max-width: 768px) {
+
+        width: 30%; 
+        margin-bottom: 10%;
+      }
+    }
+  }
+
+  .SectionHitosA {
+
+    > .Title {
+
+      color: $color-text-dark;
+    }
+
+    .Hito {
+
+      flex: 0 0 33.33%;
+      
+      cursor: pointer;
+      
+      @media (max-width: 768px) {
+
+        flex:0 0 100%;
+      }
+    }
+
+    .Image {
+
+      padding: 0 0 50%;
+
+      a {
+        @include absolutebox();
+
+        &:hover {
+  
+          &:after {
+            
+            content: "";
+            background-color: $color-image-hover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+          }
+        }
+      }
+    }
+
+    .Text {
+      
+      border: none;
+      padding: 0;
+    }
+  }
+
+}
+
+.Page.we-are-water-foundation-water-and-sanitation-drivers-of-development,
+.Page.we-are-water-foundation-awareness-and-knowledge-sharing-activities,
+.Page.fundacion-we-are-water-acciones-de-difusion,
+.Page.fundacion-we-are-water-motores-de-desarrollo {
+
+  .SectionHead {
+      
+    @media (max-width: 768px) {
+
+      margin: 8% 10% !important;
+    }      
+
+    .Logo {
+
+      width: 17%;
+      margin: 2% auto;
+      
+      @media (max-width: 768px) {
+
+        width: 40%;
+        margin: 6% auto;
+      }      
+    }
+  }
+}
+
+.Page.we-are-water-foundation-cooperation-projects-in-disadvateged-communities,
+.Page.fundacion-we-are-water-proyectos-de-colaboracion {
+
+  .Hito {
+
+    flex: 0 0 33.33%;
+    cursor: pointer;
+    
+    @media (max-width: 768px) {
+
+      flex: 0 0 100%;
+    } 
+  }
+}
+
+.Page.everything-for-the-bathroom-all-over-the-world,
+.Page.todo-en-bano-en-todo-el-mundo {
+
+  .MapSections > .Text {
+
+      font-size: 150%;
+  }
+}
+
+.Page.financial-statements,
+.Page.informe-financiero {
+
+  $glow: 12px;
+
+  .PageHeader > .Title {
+
+    text-shadow: 0 0 $glow #000,
+                 0 0 $glow #000,
+                 0 0 $glow #000,
+                 0 0 $glow #000;
+  }
+
+  .DatasB {
+
+    margin: 2% 20%;
+    padding: 2% 0;
+    border-width: 1px 0 ;
+    
+    @media (max-width: 768px) {
+
+      margin: 2% 10%;
+    }
+
+    .DatasSectionB {
+
+      width: 24%;
+      padding: 0 0 0 5%;      
+    
+      @media (max-width: 768px) {
+
+       width: 100%;
+      padding: 0 0 0 0;   
+      }
+    }
+
+    .DatasSectionB:first-child {
+
+      .DataB:last-child {
+
+        font-size: 80%;
+      }
+    }
+  }
+
+  .TextGraphic {
+
+    margin: 5% 10% !important;
+  }
+
+  #CifraNegocios {
+
+    .GraphicWrapper {
+
+      padding: 0 0 210px 0;
+
+      @media (max-width: 768px) {
+
+        margin-left: -24px;
+      }
+    }
+  }
+
+  #Resultados {
+
+    .GraphicWrapper {
+
+      padding: 0 0 320px 0;
+
+      @media (max-width: 768px) {
+
+        margin-left: -24px;
+      }
+    }
+
+    #PieDeGrafico {
+
+      text-align: center;
+      font-size: 80%;
+    }
+
+    #Comentario {
+
+      text-align: center;
+      font-size: 70%;
+      margin: 8% 0 0;
+      text-align: right;
+      width: 70%;
+      float: right;
+    }
+  }
+
+  .SectionAccess:not(.COVID) {
+
+    @media (max-width: 768px) {
+
+      margin: 15% 10%;   
+
+      .More:after {
+
+        background: linear-gradient(
+          0deg, 
+          transparent 0%, 
+          transparent 48.5%, 
+          #000 48.5%,
+           #000 52.5%, 
+           transparent 52.5%, 
+           transparent 100%);
+      } 
+    }
+  }
+
+  .COVID {
+
+    padding: 1% 2%;
+    margin: 5% 10%;
+    background-color: #E6E7E9;
+    
+    @media (max-width: 768px) {
+
+      padding: 5% 5%;    
+    }
+
+    p {
+
+      margin: 0 0 2%;
+    }
+
+    .Title {
+
+      margin: 2% auto 1%;
+    
+      @media (max-width: 768px) {
+
+       line-height: 120%;
+      }
+    }
+  }
+
+  .LinesB {
+
+    .recharts-legend-wrapper {
+
+      bottom: -10px !important;
+
+      .recharts-legend-item-text {
+
+        color: $color-text-dark;
+        font-family: "Gotham-Light";
+      }
+    }
+  }
+}
+
+.Page.the-way-ahead-sustainability,
+.Page.avanzando-hacia-el-futuro-sostenibilidad {
+
+  .Ciclo {
+    
+    margin: 16% 10% 0;
+
+    @media (max-width: 768px) {       
+      
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  
+  .Ciclo + .SectionHead {
+    
+    .Slogan {
+
+      font-size: 200%;
+    }
+  }
+}
+
+.Page.the-way-ahead-people,
+.Page.avanzando-hacia-el-futuro-personas {  
+
+  .DatasB {
+
+    border-width: 1px 0 1px 0;
+    padding: 5% 0 5% 0;
+
+    .DatasSectionB {
+
+      padding: 0 0 0 18%;
+
+      @media (max-width: 768px) {
+
+        padding: 0 0 0 0;      
+      }
+    }    
+
+    .GraphicWrapper {
+
+      margin: -150px 0 0 10%;
+      width: 48%;
+      padding: 0 0 30% 0;
+      position: relative;
+      
+      @media (max-width: 768px) {
+
+        margin: 0;  
+        width: 100%;    
+        padding: 0 0 60% 0;
+      }
+
+      h4 {
+
+        margin: 5% 0 0 0;
+        border: solid $color-border-blue;
+        border-width: 1px 0 0 0;
+        padding: 5% 0 0 0;
+        font-family: "Gotham-Bold";
+        font-size: 80%;
+        text-transform: uppercase;
+      }
+
+      .Graphic {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .DonutE {
+
+          svg {
+
+            .recharts-pie-labels {
+
+              font-family: "Gotham-Light";
+              font-size: 180%;
+            }
+          }
+
+          .recharts-legend-wrapper {
+
+            bottom: 28px !important;
+          }
+        }
+      }
+    }
+
+    &:after {
+
+      display: block;
+      content: "";
+      clear: "block";
+    }
+  }
+
+  .ColorSectionB {
+    
+    margin: 10% 10% 0;
+  }
+}
+
+.Page.financial-statements-group-companies,
+.Page.informe-financiero-sociedades-del-grupo {
+
+  td.noborder { border-top-width: 0; }
+}
+
+.Page.everything-for-the-bathroom-all-over-the-world,
+.Page.todo-el-bano-en-todo-el-mundo {
+
+  .MapSections {
+
+    margin: 0;
+  }
+}
+
+.Page.el-mundo-a-nuestro-alrededor,
+.Page.the-world-around-us {
+
+}

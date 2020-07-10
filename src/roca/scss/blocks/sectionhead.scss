@@ -1,0 +1,35 @@
+.SectionHead {
+
+  margin: 7% 0 5% 0;
+
+  @media (max-width: 768px) {
+
+    margin: 7% 10% 5%;
+  }
+
+  .Logo {
+
+    width: 7%;
+    margin: 1% auto 3%;
+    
+    @media (max-width: 768px) {
+
+      width: 20%;
+    }
+  }
+
+  .Slogan {
+
+    font-size: 260%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $color-roca-blue-text;
+    padding: 0 0 1% 0;;
+    text-align: center;
+  }
+
+  .Text {
+
+    @include textintro();
+  }
+}

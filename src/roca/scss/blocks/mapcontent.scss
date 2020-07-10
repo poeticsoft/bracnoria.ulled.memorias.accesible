@@ -1,0 +1,75 @@
+.MapContent {
+
+  width: 20%;
+  margin: 10% 0 0 10%;
+
+  .Region{
+
+    font-family: "Gotham-Bold";
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-text-light;
+    background-color: $color-background-dark;
+  }
+
+  .Text {
+
+    margin: 3% 0 0 0;
+    border:solid $color-border-blue;
+    border-width: 1px 0 0 0;
+    padding: 3% 0 ;    
+  }
+
+  .Countries {
+
+    font-family: "Gotham-ExtraLight";
+    text-transform: uppercase;
+    font-size: 90%;
+  }
+
+  .Link {
+
+    @include morelink();
+    @include morelinkline();
+  }
+
+  .ContentGalleries {
+
+    .GalleryC {
+
+      margin: 5% 0 240px;
+
+      .PreTitle {
+
+      }
+
+      .Title {
+
+
+      }
+
+      .Text {
+
+        margin: 0 0 10% 0;
+      }
+
+      .GalleryImages {
+
+        position: absolute;
+        white-space: nowrap;
+
+        .Image {
+
+          display: inline-block;
+          height: 140px;
+
+          img {
+
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

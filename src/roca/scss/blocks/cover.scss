@@ -1,0 +1,47 @@
+.CoverRoca {
+
+  position: relative;
+  padding: 0 0 66.66% 0;
+  overflow: hidden;
+
+  figure {
+
+    @include absolutebox();
+
+    img {
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    } 
+  }
+
+  .Graphic,
+  .Title {    
+
+    @include absolutebox();
+  }
+
+  .Title {
+
+    &:before,
+    .ForCenter {
+
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:before {
+
+      content: " ";
+      height: 100%;
+      width: 0;
+    }
+    
+    .ForCenter {
+
+      width: 100%;
+    }
+  }
+}

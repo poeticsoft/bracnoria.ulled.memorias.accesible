@@ -1,0 +1,96 @@
+.MenuC {   
+
+  padding: 0 8%;  
+
+  .SectionHead {
+
+    margin: 7% 0 5% 0;
+  }
+
+  .Options {  
+
+    text-align: center;
+    border: solid 1px $color-border-dark;
+    margin: 10% 10% 5%;
+    
+    @media (max-width: 768px) {
+
+      margin: 10% 0 5%;
+      border: none;
+    }
+
+    .OptionC {
+
+      display: inline-block;
+      vertical-align: top;
+      width: 28%;
+      margin: -8% 0 0;
+
+      @media (max-width: 768px) {
+
+        width: 100%;
+        margin: 6% 0;
+        border: solid 1px $color-border-dark;
+        padding: 6%;
+        box-sizing: border-box;
+      }
+
+      .Icon {
+
+        width: 30%;
+        margin: 10% auto 5%;
+        padding: 5%;
+        background-color: #fff; 
+
+        @media (max-width: 768px) {
+
+          width: 20%;
+          margin: -15% auto 6%;
+          padding: 0;
+        }
+
+        img {
+
+          width: 80%;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+
+      .Title {
+
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+      }
+
+      ul.Points {
+
+        list-style-position: inside;
+        padding: 0 0 10%;
+        margin: 0; 
+
+        @media (max-width: 768px) {
+
+          padding: 0 0 0;
+        }
+
+        li {
+
+          padding: 0;
+          text-align: left;
+          margin: 0 0 5% 0;
+        }
+      }
+    }
+
+    .OptionC + .OptionC {
+
+      margin: -8% 0 0 5%;
+
+      @media (max-width: 768px) {
+
+        margin: 6% 0;
+      }
+    }
+  }
+}

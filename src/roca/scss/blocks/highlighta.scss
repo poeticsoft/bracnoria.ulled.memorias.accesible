@@ -1,0 +1,69 @@
+.HighlightA {
+
+  margin: 0 16%;
+  background-color: $color-highlight-background;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    
+    margin: 0 8%;
+    padding: 8%;
+  }
+
+  .Image,
+  .Text {
+
+    display: inline-block;
+    vertical-align: middle;
+
+    @media (max-width: 768px) {
+      
+      display: block;
+    }
+  }
+
+  .Image {
+
+    transform: scale(2);
+    transform-origin: 100% 50%;
+    width: 80px;
+    margin: 0 15px 0 0;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+    
+    @media (max-width: 768px) {  
+
+      transform: scale(1);
+      width: 100%;
+      margin: 0 0 10% 0;
+    }
+    
+    &.Visible {
+
+      opacity: 1;   
+
+      img {
+        
+        animation: rotatecenter 20s infinite linear;
+      }
+    }
+  }
+
+  .Text {
+
+    width: 60%;
+    font-size: 90%;
+    font-family: "Gotham-Bold";
+    text-align: left;
+    padding: 1% 10% 1% 0;
+
+    @media (max-width: 768px) {
+      
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

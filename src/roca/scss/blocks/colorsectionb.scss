@@ -1,0 +1,141 @@
+$sizearrow: 20px;
+
+
+.ColorSectionB {
+
+  margin: 0 10%;
+  position: relative;
+
+  .ArrowColumn {
+
+    float: left;
+    width: 49%;
+    box-sizing: border-box; 
+
+    .Arrow { 
+
+      background-color: $color-arrow-blue;
+      color: $color-text-light;
+      box-sizing: border-box;
+      position: relative;
+      padding: 0 0 $space * 4 0;
+
+      .Title {
+
+        padding: 0 0 $space * 2;
+        margin: $space * 2 $space * 3;
+        border: solid $color-border-light;
+        border-width: 0 0 2px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .Subtitle {
+
+        margin: $space * 2 $space * 3 $space;
+        text-align: center;
+      }
+
+      .Text {
+
+         margin: 0 $space * 3 0;
+      }
+
+    } 
+    
+    .Slogan {
+      
+      position: relative;
+      font-size: 150%;
+      line-height: 160%;
+      text-transform: uppercase;
+      color: $color-arrow-blue;
+      text-align: center;
+      padding:  10% 5%;
+      box-sizing: border-box;
+      background-color: $color-background-light;
+
+      &:after {
+        
+        content: "";
+        width: 0; 
+        height: 0;       
+        border-top: $sizearrow solid transparent;
+        border-right: $sizearrow solid transparent;
+        border-bottom: $sizearrow solid $color-arrow-blue;
+        border-left: $sizearrow solid transparent;  
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-$sizearrow);
+      }
+    } 
+  } 
+
+  .List {
+
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 49%;
+    padding: 0 0 0 1%;
+    box-sizing: border-box;
+    background-color: $color-background-list-a;
+    padding: $space * 2;
+
+    .Pretitle {
+
+      text-align: center;
+      font-family: "Gotham-Light";
+      text-transform: uppercase;
+      font-size: 80%;
+      margin: 0 0 5%;
+    }
+
+    .Title {
+
+      text-align: center;
+      font-family: "Gotham-Bold";
+      margin: 2% 0 5% 0;
+      border: solid $color-border-dark;
+      border-width: 2px 0 1px 0;
+      padding: 2% 0;
+    }
+
+    .IconItem {
+
+      margin: 0 0 5%;
+
+      $widthicon: 20%;
+
+      .Icon {
+
+        width: $widthicon;
+        float: left;
+      }
+
+      .Text {
+
+        width: 100% - $widthicon;
+        padding: 0 0 0 5%;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      &:after {
+
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  &:after {
+
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

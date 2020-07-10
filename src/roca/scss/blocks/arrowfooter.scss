@@ -1,0 +1,86 @@
+.ArrowFooter {  
+
+  margin: 5% 10% 0;
+
+  .Slogan {
+
+    width: 50%;
+    font-size: 150%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $color-arrow-blue;
+    text-align: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+
+      width: 100%;    
+    } 
+  }
+
+  .Footer {    
+
+    $sizearrow: 30px;
+    position: relative;
+    margin: $sizearrow * 2 0 0;
+
+    .Arrow {
+
+      position: absolute;
+      width: 50%;
+      background-color: $color-arrow-blue;
+      color: $color-text-light;
+      text-align: center;
+      padding: $space * 3 $space * 2 $space * 2;
+      box-sizing: border-box;
+
+      @media (max-width: 768px) {
+
+        position: relative;
+        width: 100%;    
+      } 
+
+      &:before {
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: $sizearrow solid transparent;
+        border-right: $sizearrow solid transparent;        
+        border-bottom: $sizearrow solid $color-arrow-blue;
+        display: block;
+        margin: -$sizearrow * 1.5 auto 0;
+      }
+
+      .Title {
+
+        padding: 0 0 $space * 2;
+        margin: $space * 2 $space * 3;
+        border: solid $color-border-light;
+        border-width: 0 0 2px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .Image {
+
+      width: 50%; 
+      height: 100%;
+      float: right;
+
+      @media (max-width: 768px) {
+
+        width: 100%; 
+        float: none;   
+      } 
+    }
+
+    &:after {
+
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+}

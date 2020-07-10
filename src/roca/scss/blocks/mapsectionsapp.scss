@@ -1,0 +1,55 @@
+body.roca .MapSections {
+
+  .World {
+
+    position: relative;
+    margin: 0 10%;
+
+    @media (max-width: 768px) {
+
+      margin: 0 -145px 0 -150px;
+      
+      .PointTitle {
+
+        top: 20px;
+        font-size: 70%;
+      }
+    }
+
+    .MapPoints {
+
+      @include absolutebox;
+
+      .Point {      
+
+        position: absolute;  
+
+        .Pointpos {
+
+          background-image: url(~assets/map-point.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          border-radius: 50%;
+          background-color: transparent;
+          cursor: pointer;
+          z-index: unset;
+        }
+
+        .PointTitle {
+
+          font-family: "Gotham-Bold";
+          text-transform: uppercase;
+          font-size: 80%;
+          position: absolute;
+          top: $space * 3;
+          width: 120px;
+          line-height: 120%;;
+          text-align: center;
+          transform: translateX(-50%);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

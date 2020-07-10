@@ -1,0 +1,17 @@
+.HomeSlideD {
+
+  padding: 0 0 45%;
+
+  .Cita {
+
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 42%;
+
+    @media (max-width: 768px) {
+
+      width: 62%;
+    }
+  }
+}

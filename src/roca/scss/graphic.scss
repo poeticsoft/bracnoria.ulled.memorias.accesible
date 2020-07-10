@@ -1,0 +1,191 @@
+.Graphic {
+
+  box-sizing: border-box;
+  width: 100%;
+
+  pre {
+
+    display: none;
+  }
+
+  font-family: "Gotham-ExtraLight";
+}
+
+.GraphicTabs .GraphicTab .GraphicTabGraphics {
+
+  $graphicgap: $space * 2;
+
+  .GraphicWrapper {
+    
+    @include absolutebox(
+      $graphicgap,
+      $graphicgap,
+      $graphicgap,
+      $graphicgap
+    );
+  }
+
+  @media (min-width: 768px) { 
+
+    &.Graphics_2 {
+
+      .GraphicWrapper:nth-child(1) { right: calc(40% - #{$graphicgap / 2}) }
+      .GraphicWrapper:nth-child(2) { left: calc(60% - #{$graphicgap / 2}) }
+    }
+  } 
+
+  @media (max-width: 768px) { 
+
+    &.Graphics_2 {
+
+      .GraphicWrapper:nth-child(1) { bottom: calc(40% + #{$graphicgap / 2}) }
+      .GraphicWrapper:nth-child(2) { top: calc(60% + #{$graphicgap / 2}) }
+    }
+  }
+}
+
+.Page.inicio,
+.Page.home {
+
+  .NumbersA {
+
+    color: $color-text-dark;
+  }
+
+  .LinesC,
+  .DonutA {
+
+    .recharts-legend-item-text {
+
+      color: $color-text-light;
+    }
+
+    svg {
+
+      text {
+
+        fill: $color-text-light;
+      }
+
+      .recharts-cartesian-axis {
+
+        line {
+
+          stroke: #fff;
+        }
+
+        &.yAxis {
+
+          .recharts-cartesian-axis-line,
+          .recharts-cartesian-axis-tick-line {
+
+            display: none;
+          }
+        }
+      }
+
+      .recharts-pie-sector {
+
+        path {
+          
+          stroke: transparent !important;
+        }
+      }
+
+      .recharts-pie-labels {
+
+        font-family: "Gotham-ExtraLight";
+        font-size: 120%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) { 
+    
+    .LinesC.home-cifra-negocios {
+
+      margin-left: -$space * 3;
+
+      svg text {
+
+        font-size: 100%;
+      }
+
+      .Legend {
+
+        margin-left: $space * 3;
+      }
+    }
+  }
+
+  .Graphic.NumbersA {
+
+    &:before,
+    div {
+
+      vertical-align: top;
+    }
+    
+    .NumbersA {
+
+      padding: 0 0 0 10%;      
+
+      .Subtext {
+
+        color: $color-text-light;
+        font-family: "Gotham-ExtraLight";
+        font-size: 80%;
+        margin: $space / 2 0 0 0;
+      }
+    }
+  }
+
+  #HomeResultados {
+
+    .wp-block-table {
+
+      display: inline-block;
+      width: 100%;
+
+      table {
+
+        border-collapse: collapse;
+        font-size: 90%;
+        width: 100%;
+
+        th, td {
+          
+          color: $color-text-light;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          border-color: $color-border-light;
+          padding: $space $space;       
+        }
+
+        th {
+
+          text-align: right; 
+          font-family: "Gotham-Bold"  
+        }
+
+        td {
+
+          text-align: right;
+          font-family: "Gotham-Book";  
+
+          &:first-child {
+
+            font-family: "Gotham-ExtraLight"
+          }
+        }
+      }
+    }
+
+    .Legend {
+
+      color: $color-text-light;
+      font-family: "Gotham-ExtraLight";
+      font-size: 80%;
+    }
+  }
+}

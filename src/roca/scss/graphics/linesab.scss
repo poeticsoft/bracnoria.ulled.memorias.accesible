@@ -1,0 +1,50 @@
+.GraphicWrapper {
+
+  .LinesA,
+  .LinesB {
+
+    .recharts-legend-item-text {
+
+      color: $color-text-light;
+    }
+
+    svg {
+
+      text {
+
+        fill: $color-text-dark;
+      }
+
+      .recharts-cartesian-axis {
+
+        line {
+
+          stroke: #000;
+        }
+
+        &.yAxis {
+
+          .recharts-cartesian-axis-line,
+          .recharts-cartesian-axis-tick-line {
+
+            display: none;
+          }
+        }
+
+        &.xAxis {
+
+          .recharts-cartesian-axis-line,
+          .recharts-cartesian-axis-tick-line {
+
+            display: none;
+          }
+        }
+      }
+
+      .recharts-pie-sector {
+
+        stroke: transparent;
+      }
+    }
+  }
+}

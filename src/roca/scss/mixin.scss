@@ -1,0 +1,203 @@
+@keyframes rotatecenter {
+
+  from {
+
+    transform: rotate(0deg);
+  }
+
+  to {
+    
+    transform: rotate(359deg);
+  }
+}
+
+@mixin absolutebox(
+  $top: 0, 
+  $right: 0,
+  $bottom: 0,
+  $left: 0
+) {
+
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin verticalcenter() { 
+
+  &:before,
+  > * {
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:before {
+
+    content: "";
+    height: 100%;
+    width: 0;
+  }
+}
+
+@mixin lateraltitle() {  
+
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: $space * 1.5 - 2 $space * 2;
+  text-align: right;    
+  transform: rotate(270deg);
+  transform-origin: 100% 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@mixin morelink() {
+
+  padding: $space 0;
+  text-transform: uppercase;
+  position: relative;
+
+  a {
+
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    font-size: 80%;
+    background-color: $color-background-light;
+    padding: 0 $space;
+
+    &:before {
+
+      $size: 16px;
+
+      display: inline-block;
+      vertical-align: middle;
+      content: "+";
+      font-family: "Gotham-Bold";
+      width: $size;
+      height: $size;
+      line-height: $size;
+      text-align: center;
+      border: solid 2px $color-border-dark;
+      border-radius: 50%;
+      font-size: 140%;
+      position: relative;
+      z-index: 2;
+      margin: 0 $space / 2 0 0;
+    }
+  }
+}
+
+@mixin framelink() {
+
+  border: solid 1px $color-border-dark;
+  padding: $space $space * 2 ;
+}
+
+@mixin morelinkline() {
+
+  &:before,
+  a {
+
+    background-color: #fff;
+  }
+
+  &:after {
+
+    content: " ";
+    @include absolutebox();
+    z-index: 0;
+    background: linear-gradient(
+      0deg, 
+      transparent 0%, 
+      transparent 49.5%, 
+      $color-border-dark 49.5%, 
+      $color-border-dark 51.5%, 
+      transparent 51.5%, 
+      transparent 100%
+    );
+    
+  }
+}
+
+@mixin morelinkcenter() {
+
+  text-align: center;
+}
+
+@mixin lightlink() {
+
+  border-color: $color-border-light;
+
+  &:before {
+
+    border-color: $color-border-light;
+    color: $color-text-light;
+  }
+
+  a {
+    
+    color: $color-text-light;
+  }
+}
+
+@mixin ellipsis () {
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin boxshadow() {
+
+  box-shadow: 0 0 12px $color-shadows; 
+}
+
+@mixin justify() {
+  
+  white-space: pre;           /* CSS 2.0 */
+  white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+  word-wrap: break-word;
+  -moz-hyphens:auto; 
+  -webkit-hyphens:auto; 
+  -o-hyphens:auto; 
+  hyphens:auto;
+  text-align: justify;   
+}
+
+@mixin textintro() {  
+
+  margin: 0 15% 5%;
+  font-size: 150%;
+  line-height: 140%;
+  text-align: center;
+  font-family: "Gotham-Book";
+}
+
+@mixin alignmiddle() {
+
+  &:before,
+  > * {
+    
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:before {
+
+    content: "";
+    width: 0;
+    height: 100%;
+  }
+}

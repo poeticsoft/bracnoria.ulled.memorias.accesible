@@ -1,0 +1,136 @@
+.ColorSectionA {
+
+  margin: 0 10%;
+  position: relative;
+
+  .ArrowColumn {
+
+    position: absolute;
+    width: 49%;
+    height: 100%;
+    box-sizing: border-box; 
+    border: solid $color-border-dark; 
+    border-width: 1px 0 0 0;
+
+    @media (max-width: 768px) {
+      
+      position: relative;
+      width: 100%;
+      height: auto;
+    } 
+
+    .Slogan {
+
+      font-size: 130%;
+      line-height: 160%;
+      text-transform: uppercase;
+      color: $color-roca-blue-text;
+      text-align: center;
+      padding:  10% 5%;
+      box-sizing: border-box;
+    }  
+
+    .Arrow { 
+
+      $sizearrow: 20px;
+      background-color: $color-arrow-blue;
+      color: $color-text-light;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+      padding: 2% 0;
+
+      &:before {
+        
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: $sizearrow solid transparent;
+        border-right: $sizearrow solid transparent;        
+        border-bottom: $sizearrow solid $color-arrow-blue;
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-$sizearrow);
+      }
+
+      .Title {
+
+        padding: 1% 0 2% 0;
+        border: solid $color-border-light;
+        border-width: 0 0 1px 0;
+        margin: 1% 3%;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+          
+          padding: 3% 0 6% 0;
+        } 
+      }
+
+      .Text {
+
+         padding: 3%;
+
+        @media (max-width: 768px) {
+          
+          padding: 6%;
+        } 
+      }
+    } 
+  }
+
+  .List {
+
+    float: right;
+    right: 0;
+    width: 49%;
+    padding: 0 0 0 1%;
+    box-sizing: border-box;
+    background-color: $color-background-list-a;
+    padding: $space * 2;
+
+    @media (max-width: 768px) {
+      
+      float: none;
+      width: 100%;
+    } 
+
+    .IconItem {
+
+      margin: 0 0 5%;
+
+      $widthicon: 20%;
+
+      .Icon {
+
+        width: $widthicon;
+        float: left;
+      }
+
+      .Text {
+
+        width: 100% - $widthicon;
+        padding: 0 0 0 5%;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      &:after {
+
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  &:after {
+
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

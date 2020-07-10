@@ -1,0 +1,62 @@
+.MapSections {
+
+  overflow: hidden;
+
+  .Map {
+
+    position: relative;
+
+    img {
+
+      width: 100%;
+      display: block;
+    }
+  }
+
+  > .Title {
+
+    color: $color-text-dark;
+  }
+
+  .MapPoints {
+
+    $margin: 8%;
+
+    @include absolutebox(
+      $margin,
+      $margin,
+      $margin,
+      $margin
+    );
+
+    .Point {
+
+      &:nth-child(1) { .PointData { left: 0; } }
+      &:nth-child(2) { .PointData { left: 25%; } }
+      &:nth-child(3) { .PointData { left: 50%; } }
+      &:nth-child(4) { .PointData { left: 75%; } }
+
+      .PointPos {
+
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #c00;
+        transform: translate(-20px, -20px);
+      }
+
+      .LinkContent {
+
+        display: none;
+      }
+    }
+  }
+
+  > .Text {
+
+    text-align: center;
+    width: 80%;
+    margin: $space * 5 auto;
+  }
+}

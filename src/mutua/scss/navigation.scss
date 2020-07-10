@@ -1,0 +1,61 @@
+.menu-base-container,
+.menu-cas-container,
+.menu-cat-container,
+.menu-eng-container,
+.menu-eus-container,
+.menu-gal-container  {
+
+  border: solid $color-border-dark;
+  border-width: 0 0 1px 0;
+
+  .primary-menu {
+
+    list-style: none;
+    margin: 0;
+    padding: $space;
+
+    > li {
+
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 $space * 2 0;
+
+      a {
+
+        display: inline-block;
+        font-size: 60%;
+        text-transform: uppercase;
+        font-family: "Myriad Pro Regular";
+        color: $color-text-dark;
+      }
+
+      &.current-menu-item {
+        
+        a {
+          
+          font-family: "Myriad Pro Bold";
+        }
+      }
+
+      ul {
+
+        padding: 0;
+        list-style: none;;
+
+        li {
+
+          padding: 0;
+          border: dotted #ccc;
+          margin: 2px 0 0 0;
+          border-width: 1px 0 0 0;
+          padding: 2px 0 0 0;
+        }
+      }
+    }
+
+    li + li {
+
+      margin: 0 0 0 1%;
+    }
+  }
+}

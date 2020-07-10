@@ -1,0 +1,66 @@
+.GroupCompanies {
+
+  margin: 0 10%;
+  padding: 0 0 10% 0;
+
+  .Title {
+
+    font-size: 200%;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: #506eb4;
+    text-align: center;
+    border: solid #506eb4;
+    border-width: 0 0 1px 0;
+    padding: 0 0 5% 0;
+    margin: 5% auto;
+  }
+
+  .Table {
+
+    table {
+
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+
+      font-family: "Gotham-Light";
+      font-size: 100%;
+      text-align: left;
+      padding: $space / 4 $space;
+      text-transform: uppercase;
+        
+      @media (max-width: 768px) { 
+
+        font-size: 70%;
+      }
+    }
+
+    td {
+
+      border: solid $color-border-dark;
+      border-width: 1px 0 0 0;
+      vertical-align: top;
+      padding: $space / 2 $space;
+        
+      @media (max-width: 768px) { 
+
+        font-size: 70%;
+      }
+
+      &.noborder {
+
+        border: none;
+      }
+    }
+
+    td:first-child {
+
+      font-family: "Gotham-Bold";
+      text-transform: uppercase;
+      padding: $space / 2 $space;
+    }
+  }
+}
