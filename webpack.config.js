@@ -10,7 +10,7 @@ module.exports = {
   name: 'main',
   entry: './src/' + config.memory + '/scss/main.scss',
   output: {
-    path: path.join(__dirname, config.compilepath, config.memory)
+    path: config.destpath
   },
   context: __dirname,
   mode: config.mode == 'prod' ? 'production' : 'development',
@@ -56,8 +56,8 @@ module.exports = {
         options: {
           esModule: false,
           name: '[name].[ext]',
-          outputPath: 'fonts',
-          publicPath: 'fonts'
+          outputPath: '../fonts',
+          publicPath: '../fonts'
         }
       },
       {
@@ -67,33 +67,19 @@ module.exports = {
         options: {
           esModule: false,
           name: '[name].[ext]',
-          outputPath: 'assets',
-          publicPath: 'assets'
+          outputPath: '../assets',
+          publicPath: '../assets'
         }
       }
     ]
   },
   plugins: [
+    /*
     new EventHooksPlugin({
       'done': () => {
-        
-        // copy main.css        
-        const cssFile = path.join(__dirname, config.compilepath, config.memory, 'main.css')
-        const destCssFile = path.join(config.destpath, config.memory, 'main.css')
-        if(fs.existsSync(cssFile)) fs.copyFileSync(cssFile, destCssFile)        
-
-        if(config.update) {
-        
-          // copy assets & fonts  
-          const assetsDir = path.join(__dirname, config.compilepath, config.memory, 'assets') 
-          const destAssetsDir = path.join(config.destpath, config.memory, 'assets')
-          copydir.sync(assetsDir, destAssetsDir); 
-          const fontsDir = path.join(__dirname, config.compilepath, config.memory, 'fonts') 
-          const destFontsDir = path.join(config.destpath, config.memory, 'fonts')
-          copydir.sync(fontsDir, destFontsDir);
-        }
       }
     }),
+    */
     new MiniCssExtractPlugin({
       filename: 'main.css'
     }),

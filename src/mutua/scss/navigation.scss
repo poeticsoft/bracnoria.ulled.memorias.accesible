@@ -1,37 +1,33 @@
-.menu-base-container,
-.menu-cas-container,
-.menu-cat-container,
-.menu-eng-container,
-.menu-eus-container,
-.menu-gal-container  {
 
-  border: solid $color-border-dark;
+.Logo {
+
+  padding: $space * 3 $space * 2 $space * 2;
+
+  img {
+
+    width: 140px;
+  }
+}
+
+nav {
+
+  border: solid $color-black;
   border-width: 0 0 1px 0;
+  padding: $space * 2;
+  margin: 0 0 $space * 2 0;
 
-  .primary-menu {
+  > ul {
 
     list-style: none;
     margin: 0;
-    padding: $space;
+    padding: 0;
+    display: flex;
 
     > li {
 
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 0 $space * 2 0;
-
-      a {
-
-        display: inline-block;
-        font-size: 60%;
-        text-transform: uppercase;
-        font-family: "Myriad Pro Regular";
-        color: $color-text-dark;
-      }
-
-      &.current-menu-item {
+      &.current {
         
-        a {
+        > a {
           
           font-family: "Myriad Pro Bold";
         }
@@ -40,7 +36,7 @@
       ul {
 
         padding: 0;
-        list-style: none;;
+        list-style: none;
 
         li {
 
@@ -49,6 +45,14 @@
           margin: 2px 0 0 0;
           border-width: 1px 0 0 0;
           padding: 2px 0 0 0;
+
+          &.current {
+            
+            a {
+              
+              font-family: "Myriad Pro Bold";
+            }
+          }
         }
       }
     }
@@ -57,5 +61,14 @@
 
       margin: 0 0 0 1%;
     }
+  }
+}
+
+.Subnav {
+
+  a {
+
+    display: block;
+    margin: 0 0 $space;
   }
 }
