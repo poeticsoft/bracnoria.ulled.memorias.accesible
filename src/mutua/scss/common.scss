@@ -126,3 +126,26 @@ ul {
     width: 10%;
   }
 }
+
+.Grafico {
+
+  padding: $space * 2;
+
+  table {
+
+    border-collapse: collapse;
+
+    th,
+    td {
+      
+      border: solid $color-blue;
+      border-width: 0 0 1px 0;
+      padding: $space / 2 $space;
+    }
+    
+    th {
+      
+      border-width: 0 0 2px 0;
+    }
+  }
+}
